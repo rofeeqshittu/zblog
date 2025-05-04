@@ -59,7 +59,6 @@ zblog/
 └── views/                    # EJS templates
     ├── index.ejs             # Homepage template
     ├── createPost.ejs        # Create post form
-    └── edit.ejs              # Edit post form.
 ```
 
 ## Usage
