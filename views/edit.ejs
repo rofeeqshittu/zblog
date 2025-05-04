@@ -8,22 +8,24 @@
 </head>
 <body>
     <h1><%= title %></h1>
-
-    <button><a href="/">Go Back</a></button>
+    
+    <a href="/" class="btn">Go Back</a>
     <br><br>
- 
-    <div>
-       <form action="/edit/<%= post.id %>" method="POST">
-        <label for="ptitile">Title: </label>
-        <input type="text" name="ptitle" id="ptitle" value="<%= post.ptitle %>" required>
-        <br><br>
-
-        <label for="pbody">Content: </label>
-        <input type="text" name="pbody" id="pbody" value="<%= post.pbody %>" required>
-        <br><br>
-
-        <input type="submit" value="Save Changes">
-       </form>
+    
+    <div class="edit-form">
+        <form action="/edit/<%= post.id %>" method="POST">
+            <div class="form-group">
+                <label for="ptitle">Title: </label>
+                <input type="text" name="ptitle" id="ptitle" value="<%= post.ptitle %>" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="pbody">Content: </label>
+                <textarea name="pbody" id="pbody" rows="10" cols="50" required><%= post.pbody %></textarea>
+            </div>
+            
+            <button type="submit" class="btn">Save Changes</button>
+        </form>
     </div>
 </body>
 </html>
