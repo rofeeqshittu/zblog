@@ -8,17 +8,24 @@
 </head>
 <body>
     <h1><%= title %></h1>
-
-    <form action="/submit" method="POST">
-        <label for="ptitle">Enter the blog title:</label>
-        <input type="text"  name="ptitle" id="ptitle" placeholder="Enter your post title topic!" required>
-        <br><br>
-
-        <label for="pbody">Enter you blog content:</label>
-        <input type="text" name="pbody" id="pbody" placeholder="Type in the body of your blog post here" required>
-        <br><br>
-
-        <input type="submit" value="Submit">
-    </form>
+    
+    <a href="/" class="btn">Go Back</a>
+    <br><br>
+    
+    <div class="create-form">
+        <form action="/submit" method="POST">
+            <div class="form-group">
+                <label for="ptitle">Enter the blog title:</label>
+                <input type="text" name="ptitle" id="ptitle" placeholder="Enter your post title topic!" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="pbody">Enter your blog content:</label>
+                <textarea name="pbody" id="pbody" rows="10" cols="50" placeholder="Type in the body of your blog post here" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn">Submit Post</button>
+        </form>
+    </div>
 </body>
 </html>
