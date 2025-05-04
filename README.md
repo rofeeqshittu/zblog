@@ -15,7 +15,7 @@ A lightweight blog application built with Express.js and EJS templating engine. 
 ![ZBlog Screenshot](/img/createPageScreen.png)
 
 
-## Tech Stack
+## Tech Stack:
 
 - **Backend**: Node.js with Express.js
 - **Templating**: EJS (Embedded JavaScript)
