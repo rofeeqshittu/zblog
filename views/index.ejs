@@ -22,6 +22,10 @@
                     <li class="post-item">
                         <h4><%= post.ptitle %></h4>
                         <p><%= post.pbody %></p>
+                        <p><strong>Created At:</strong> <%= post.createdAt.toLocaleString() %></p>
+                        <% if (post.updatedAt) { %>
+                            <p><strong>Updated At:</strong> <%= post.updatedAt.toLocaleString() %></p>
+                        <% } %>
                         <div class="post-actions">
                             <a href="/edit/<%= post.id %>" class="btn">Edit Post</a>
                             <form action="/delete/<%= post.id %>" method="POST" style="display: inline;">
