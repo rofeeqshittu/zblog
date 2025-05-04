@@ -31,6 +31,7 @@ app.get('/createPost', (req, res) => {
     res.render('createPost', {title: 'Create your ZBlog post'});
 });
 
+// Create post handler 
 app.post('/submit', (req, res) => {
     const input = req.body;
     // Add a unique ID to each post
@@ -45,7 +46,7 @@ app.post('/submit', (req, res) => {
     res.redirect('/'); // Redirect to home page to see all posts
 });
 
-
+// Edit functionality
 app.get('/edit/:id', (req, res) => {
     const postId = parseInt(req.params.id);
     console.log(req.params);
