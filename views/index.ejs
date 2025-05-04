@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1><%= title %></h1>
+    <p><%= content %></p>
+    
+    <button><a href="/createPost">Create ZBlog post</a></button>
+    <br><br>
+    
+    <div class="posts-container">
+        <% if (posts.length === 0) { %>
+            <p>No posts yet. Create your first post!</p>
+        <% } else { %>
+            <ul>
+                <% posts.forEach(post => { %>
+                    <li class="post-item">
+                        <h4><%= post.ptitle %></h4>
+                        <p><%= post.pbody %></p>
+                        <div class="post-actions">
+                            <a href="/edit/<%= post.id %>" class="btn">Edit Post</a>
+                            <form action="/delete/<%= post.id %>" method="POST" style="display: inline;">
+                                <button type="submit" class="btn delete-btn">Delete Post</button>
+                            </form>
+                        </div>
+                    </li>
+                <% }); %>
+            </ul>
+        <% } %>
+    </div>
+</body>
+</html>

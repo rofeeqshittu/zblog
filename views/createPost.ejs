@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1><%= title %></h1>
+
+    <form action="/submit" method="POST">
+        <label for="ptitle">Enter the blog title:</label>
+        <input type="text"  name="ptitle" id="ptitle" placeholder="Enter your post title topic!" required>
+        <br><br>
+
+        <label for="pbody">Enter you blog content:</label>
+        <input type="text" name="pbody" id="pbody" placeholder="Type in the body of your blog post here" required>
+        <br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

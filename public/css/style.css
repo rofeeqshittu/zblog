@@ -1,0 +1,9 @@
+/* Basic styling for the ZBlog app */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}

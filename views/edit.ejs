@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1><%= title %></h1>
+
+    <button><a href="/">Go Back</a></button>
+    <br><br>
+ 
+    <div>
+       <form action="/edit/<%= post.id %>" method="POST">
+        <label for="ptitile">Title: </label>
+        <input type="text" name="ptitle" id="ptitle" value="<%= post.ptitle %>" required>
+        <br><br>
+
+        <label for="pbody">Content: </label>
+        <input type="text" name="pbody" id="pbody" value="<%= post.pbody %>" required>
+        <br><br>
+
+        <input type="submit" value="Save Changes">
+       </form>
+    </div>
+</body>
+</html>
